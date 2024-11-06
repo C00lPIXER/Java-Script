@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //"use strict"
+
+        //this in global space - global object - window
+
+        // console.log(this);
+
+        //this inside a function
+
+        function x(){
+            //note: the value depends on strict / non strict mode
+            console.log(this);
+        }
+        // x();
+
+        //this in strict mode - note:this substitution
+        /*if the value of this keyword is undifined or null this keyword replaced with global object, only in none strict mode*/
+
+        //this kwyword value is depends on how the function is called
+
+        // this inside a object's method
+
+        const obj = {
+            a: 10,
+            b: 29,
+            c: function(){
+                console.log(this);
+            }
+        }
+        // obj.c();
+
+        // this inside a arrow function
+
+        const obje = {
+            f: 30,
+            h: () => {
+                console.log(this)
+            }
+        }
+
+        // obje.h();
+
+        // this inside a nested arrow function
+
+        const ob = {
+            p: 30,
+            k: function (){
+                const o = () => {
+                    console.log(this)
+                };
+                o();
+            }
+        }
+
+        // ob.k()
+
+
+    </script>
+</body>
+</html>

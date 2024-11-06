@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //call
+        
+        let name = {
+            firstname: "Amal",
+            lastname: "Krishna",
+        }
+        let printFullName = function (hometwon) {
+                console.log(this.firstname +" "+this.lastname + " form " + hometwon);
+            }
+
+        printFullName.call(name, "mkba");
+
+        let name2 = {
+            firstname: "vimal",
+            lastname: "manu"
+        }
+
+        //function borrowing
+        
+        printFullName.call(name2, "kocc");
+
+        //apply method 
+
+        printFullName.apply(name2, ["kerlds"]);
+
+        //bind method
+
+        let printMyName = printFullName.bind(name2, "ramapuram");
+        console.log(printFullName);
+        printMyName();
+
+
+    </script>
+</body>
+</html>

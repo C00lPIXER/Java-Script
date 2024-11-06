@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            name: "Amal",
+            job: "devlopre",
+            age: 19
+        }
+        const obj1 = {
+            name1: "Amal",
+            job1: "devlopre",
+            age1: 19,
+            lang: ["java", "c", "python"]
+        }
+
+        console.log(Object.assign(obj, obj1)) //assign method for merge
+
+        Object.freeze(obj) //freeze method for freeze
+        obj.name = "Krishna"
+        console.log(obj1)
+        Object.freeze(obj1.lang)
+        obj1.lang[0] = "bash"
+
+        console.log(Object.keys(obj1))
+        console.log(Object.values(obj1))
+        console.log(obj)
+
+    </script>
+</body>
+</html>
